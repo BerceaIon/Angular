@@ -1,0 +1,108 @@
+<div class="container">
+  <!-- Note menu -->
+  <div class="row" style="margin-top:12px;">
+    <div class="col-md-8">
+      <input type="text"
+             class="form-control"
+             style="width: 100%;"
+             placeholder="Search patients...">
+    </div>
+    <div class="col-md-4">
+
+      <button type="buton"
+              class="btn btn-info pull-right"
+              style="margin-left:12px;"><i class="fa fa-plus"></i> New patient
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- Note content -->
+  <div class="row" style="margin-top: 28px;">
+    <!-- Notebooks Menu -->
+    <div class="col-md-3">
+      <br>
+      <div class="list-group list-group-flush">
+        <a  class="list-group-item list-group-item-action">
+          <i class="fa fa-book"></i>&nbsp;All patients
+        </a>
+        <!-- Notebook List -->
+        <a  *ngFor="let patient of patients " class="list-group-item list-group-item-action">
+        <i class="fa fa-book"></i>&nbsp;{{patient.name}}
+      </a>
+      </div>
+    </div>
+
+    <!-- Notes Panel -->
+    <div class="col-md-9">
+      <div class="row">
+        <div class="col-md-12">
+          <!-- Message if there are no notes -->
+        </div>
+      </div>
+      <div class="row">
+        <!-- Note list -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="offset-3"></div>
+    <div class="col-md-6">
+      <form name="form" #f="ngForm" novalidate class="feedback-form">
+        <!-- Address -->
+        <div class="form-group">
+          <label for="address">Insert a new caregiver</label>
+          <input type="text"
+                 id="address"
+                 class="form-control"
+                 name="address"
+                 placeholder="Caregiver address"
+          />
+        </div>
+        <!-- Birth date -->
+        <div class="form-group">
+          <label for="birthDate">Birth Date</label>
+          <input type="date"
+                 id="birthDate"
+                 class="form-control"
+                 name="birthDate"
+                 placeholder="Caregiver birth date"
+          />
+        </div>
+
+
+        <!-- gender -->
+        <div class="form-group">
+          <label for="gender">Gender</label>
+          <input type="text"
+                 id="gender"
+                 class="form-control"
+                 name="gender"
+                 placeholder="Gender"
+          />
+        </div>
+        <!-- Name -->
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text"
+                 id="name"
+                 class="form-control"
+                 name="name"
+                 placeholder="Caregiver name"
+          />
+        </div>
+
+        <button type="submit" class="btn btn-info pull-right">
+          <i class="fa fa-envelope-o"></i>
+          <span> Insert patient</span>
+        </button>
+      </form>
+    </div>
+    <div class="offset-3"></div>
+  </div>
+</div>

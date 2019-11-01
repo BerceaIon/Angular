@@ -1,0 +1,62 @@
+
+<div class="container">
+  <div class="row">
+    <div class="offset-3"></div>
+    <div class="col-md-6">
+      <form name="form" #f="ngForm" (submit)="insertPatient()" novalidate class="feedback-form">
+        <!-- Address -->
+        <div class="form-group">
+          <label for="address">Address</label>
+          <input type="text"
+                 id="address"
+                 class="form-control"
+                 name="address"
+                 placeholder="Patient address"
+                 [(ngModel)]="model.address"
+                 />
+        </div>
+        <!-- Birth date -->
+        <div class="form-group">
+          <label for="birthDate">Birth Date</label>
+          <input type="date"
+                 id="birthDate"
+                 class="form-control"
+                 name="birthDate"
+                 placeholder="Patient's birth date"
+                 [(ngModel)]="model.birthDate"
+                 />
+        </div>
+
+
+        <!-- gender -->
+        <div class="form-group">
+          <label for="gender">Gender</label>
+          <input type="text"
+                 id="gender"
+                 class="form-control"
+                 name="gender"
+                 placeholder="Gender"
+                 [(ngModel)]="model.gender"
+                 />
+        </div>
+        <!-- Name -->
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text"
+                 id="name"
+                 class="form-control"
+                 name="name"
+                 placeholder="Patient's name"
+                 [(ngModel)]="model.name"
+                 />
+        </div>
+
+        <button type="submit" class="btn btn-info pull-right">
+          <i class="fa fa-envelope-o"></i>
+          <span> Insert patient</span>
+        </button>
+      </form>
+    </div>
+    <div class="offset-3"></div>
+  </div>
+</div>
